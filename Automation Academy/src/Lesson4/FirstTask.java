@@ -34,5 +34,15 @@ public class FirstTask {
         for (int z = firstArray.length - 1; z >= 0; z--) {
             System.out.print(firstArray[z] + " ");
         }
+
+        System.out.println();
+        int counter = 0;
+        int secondArray[] = new int[firstArray.length];
+        //array sorting from last element (length - 1)
+        for (int z = firstArray.length - 1; z >= 0; z--) {
+            secondArray[counter] = firstArray[z];
+            counter++;
+        }
+        System.out.println(Arrays.toString(secondArray));
     }
 }

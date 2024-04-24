@@ -18,12 +18,25 @@ public class SecondTask {
 
         System.out.println();
 
-        //printing reverse of ascended array to print descending order
+        //printing reverse of ascended array
         System.out.print("You DESC sorted array is -> ");
         for (int i = firstArray.length - 1; i >= 0; i--) {
             System.out.print(firstArray[i] + " ");
-
-        //to analyze another method of sorting descending order
         }
+
+        System.out.println();
+
+        //Creating array with descending order
+        System.out.print("You DESC sorted array is -> ");
+        for (int x = 0; x < firstArray.length; x++) {
+            for (int j = 0; j < firstArray.length; j++) {
+                if (firstArray[x] > firstArray[j]) {
+                    int temp = firstArray[x];
+                    firstArray[x] = firstArray[j];
+                    firstArray[j] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(firstArray));
     }
 }
