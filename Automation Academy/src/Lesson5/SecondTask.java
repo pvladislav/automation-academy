@@ -7,9 +7,11 @@ For example, "level" is palindrome.
 
 public class SecondTask {
     public static void main(String[] args) {
-        palindrome("level");
+        forMethod("LeVEl");
+        stringBufferMethod("LeVEl");
     }
-    static void palindrome (String word) {
+
+    static void forMethod (String word) {
         String word2 = "";
         char temp;
 
@@ -20,12 +22,24 @@ public class SecondTask {
         }
 
         //Comparing word with word2
-        if (word.equals(word2)) {
+        if (word.toLowerCase().equals(word2.toLowerCase())) {
             System.out.println("The \"" + word + "\" word is palindrome.");
         }
         else {
             System.out.print("The \"" + word + "\" word is NOT palindrome.");
+        }
+    }
+    static void stringBufferMethod (String word) {
+        //Creating revers by using StringBuffer
+        StringBuffer object = new StringBuffer(word);
+        String word2 = String.valueOf(object.reverse());
 
+        //Comparing word with word2
+        if (word.toLowerCase().equals(word2.toLowerCase())) {
+            System.out.println("The \"" + word + "\" word is palindrome.");
+        }
+        else {
+            System.out.print("The \"" + word + "\" word is NOT palindrome.");
         }
     }
 }
